@@ -1,0 +1,81 @@
+<section id="content" role="main">
+  <header class="aui-page-header">
+    <div class="aui-page-header-inner">
+      <div class="aui-page-header-main">
+        <h1>SETTINGS</h1>
+      </div><!-- .aui-page-header-main -->
+    </div>
+    <!-- .aui-page-header-inner -->
+  </header><!-- .aui-page-header -->
+  <div class="aui-page-panel">
+    <div class="aui-page-panel-inner">
+      <section id="content" role="main">
+        <div class="aui-tabs horizontal-tabs" id="tabs-example1">
+          <ul class="tabs-menu">
+            <li class="menu-item active-tab">
+              <a href="#tabs-example-first"><strong>PASSWORD</strong></a>
+            </li>
+            <li class="menu-item">
+              <a href="#tabs-example-second"><strong>ACCOUNT</strong></a>
+            </li>
+          </ul>
+          <div class="tabs-pane active-pane" id="tabs-example-first">
+            <h3>PASSWORD</h3>
+            <form action="#" method="post" id="d" class="aui top-label">
+              <fieldset>
+                <div class="field-group">
+                  <label for="d-fname">Username</label>
+                  <input ng-model="user.username" class="text long-field" type="text" id="d-fname" name="d-fname" title="first name">
+                </div>
+                <div class="field-group">
+                  <label for="d-fname">Current Password</label>
+                  <input ng-model="user.Crntpass" class="text long-field" type="text" id="d-fname" name="d-fname" title="first name">
+                </div>
+                <div class="field-group">
+                  <label for="d-fname">New Password</label>
+                  <input ng-model="user.newpass"  class="text long-field" type="text" id="d-fname" name="d-fname" title="first name">
+                </div>
+              </fieldset>
+              <div class="buttons-container">
+                <div class="buttons">
+                  <input ng-disabled="!(user.username!=null&&user.Crntpass!=null&&user.newpass!=null)" ng-click="resetpass(user)" class="aui-button aui-button-primary" type="submit" id="submit" name="submit" value="Save">
+                  <a id="cancel" class="aui-button aui-button-link" name="cancel" accesskey="c" href="#">Cancel</a>
+                </div>
+              </div>
+            </form>   
+          </div>
+          <div class="tabs-pane" id="tabs-example-second">
+            <h3>ACCOUNT</h3>
+            <form action="#" method="post" id="d" class="aui top-label">
+              <fieldset>
+                
+                <div class="field-group">
+                  <label for="d-fname">Username</label>
+                  <input ng-model="user.name" class="text long-field" type="text" id="d-fname" name="d-fname" title="first name">
+                </div>
+                <div class="field-group">
+                  <label for="d-fname">Current Email</label>
+                  <input ng-model="user.crntmail" class="text long-field" type="text" id="d-fname" name="d-fname" title="first name">
+                </div>
+                <div class="field-group">
+                  <label for="d-fname">New Email</label>
+                  <input ng-model="user.newmail" class="text long-field" type="text" id="d-fname" name="d-fname" title="first name">
+                </div>
+                <div class="field-group">
+                  <label for="d-fname">Password</label>
+                  <input ng-model="user.pass" class="text long-field" type="text" id="d-fname" name="d-fname" title="first name">
+                </div>
+              </fieldset>
+              <div class="buttons-container">
+                <div class="buttons">
+                  <input ng-disabled="!(user.name!=null&&user.crntmail!=null&&user.pass!=null)" ng-click="resetemail(user)" class="aui-button aui-button-primary" type="submit" id="submit" name="submit" value="save">
+                  <a id="cancel" class="aui-button aui-button-link" name="cancel" accesskey="c" href="#">cancel</a>
+                </div>
+              </div>
+            </form>   
+          </div>
+        </div><!-- .aui-tabs -->
+      </section>
+    </div><!-- .aui-page-panel-inner -->
+  </div><!-- .aui-page-panel -->
+</section>

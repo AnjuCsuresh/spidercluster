@@ -1,0 +1,23 @@
+<section id="content" role="main" class="aui-page-focused aui-page-focused-small">
+  <div class="aui-page-panel margin-fix">
+    <div class="aui-page-panel-inner">
+      <section class="aui-page-panel-content">
+        <h2>Forgot Password ?</h2>
+        <p>Submit your email address and we will send you a link to reset your password.</p>
+        <form action="#" method="post" id="d" class="aui top-label">
+          <fieldset>
+            <div class="field-group">
+              <label for="d-fname">Email</label>
+              <input ng-model="user.email" class="text long-field" type="text" id="d-fname" name="d-fname" title="Email">
+            </div>
+          </fieldset>
+          <div class="buttons-container">
+            <div class="buttons">
+              <input ng-disabled="!(user.email!=null)" ng-click="forgot(user)" class="aui-button aui-button-primary" type="submit" id="submit" name="submit" value="Recover">
+            </div>
+          </div>
+        </form>    
+      </section>    
+    </div>
+  </div>
+</section>

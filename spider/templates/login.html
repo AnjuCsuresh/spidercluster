@@ -1,0 +1,35 @@
+<section id="content" role="main" class="aui-page-focused aui-page-focused-small">
+<div class="aui-page-panel margin-fix">
+    <div class="aui-page-panel-inner">
+        <section class="aui-page-panel-content">
+            <h2><center>LOG IN</center></h2>
+            <form action="#" method="post" id="d" class="aui top-label">
+                <fieldset>
+
+                    <div class="field-group">
+                        <label for="d-fname">Username</label>
+                        <input class="text long-field" ng-model="user.username" type="text" id="" name="" title="Username">
+                    </div>
+                    <div class="field-group">
+                        <label for="d-fname">Password</label>
+                        <input ng-model="user.password" class="text long-field" type="text" id="" name="" title="Password">
+                    </div>
+                    <div class="checkbox">
+                        <input class="checkbox" type="checkbox" name="cbThree" id="cbThree">
+                        <label for="cbThree">Remember me on this computer</label>
+                    </div>                                
+                    <div class="field-group">
+                        <label for="d-fname">Don't have an account? <a ng-click="location.path('/signup')">Sign Up for one</a></label>
+                    </div>
+                </fieldset>
+                <div class="buttons-container">
+                    <div class="buttons">
+                        <input ng-disabled="!(user.password!=null&&user.username!=null)" ng-click="login(user)"  class="aui-button aui-button-primary" type="submit" value="Log In">
+                        <a id="cancel" class="aui-button aui-button-link" name="cancel" accesskey="c" ng-click="location.path('/forgot')">Forgot password?</a>
+                    </div>
+                </div>
+            </form>    
+        </section>    
+    </div>
+</div>
+</section>

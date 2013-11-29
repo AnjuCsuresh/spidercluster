@@ -1,0 +1,43 @@
+<section id="content" role="main" >
+  <header class="aui-page-header">
+    <div class="aui-page-header-inner">
+      <div class="aui-page-header-main">
+        <h1>PROJECTS</h1>
+      </div>
+      <div class="aui-page-header-actions">
+        <div class="aui-buttons">  
+         <button id="smalldialog-button" class="aui-button" onclick="projectmodal()">Add Project</button>
+       </div>
+     </div>
+   </div>
+ </header>
+ <div class="aui-page-panel">
+  <div class="aui-page-panel-inner">
+    <section id="content" role="main" >
+
+      <table id="mySortableTable" class="aui aui-table-sortable">
+        <thead>
+          <tr>
+            <th>Spider</th>
+            <th>Pending</th>
+            <th>Running</th>
+            <th>Owner</th>
+            <th>Created</th>
+            <th>run</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="spider in spiders">
+            <td >{{spider}}</td>
+            <td>2</td>
+            <td>s</td>
+            <td>we</td>
+            <td>ewer</td>
+            <td><button id="run" class="aui-button" ng-click="start(spider)">Run</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </div><!-- .aui-page-panel-inner -->
+</div><!-- .aui-page-panel -->
+</section>
