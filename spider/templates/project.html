@@ -2,7 +2,7 @@
   <header class="aui-page-header">
     <div class="aui-page-header-inner">
       <div class="aui-page-header-main">
-        <h1>PROJECTS</h1>
+        <h1>SPIDERS</h1>
       </div>
       <div class="aui-page-header-actions">
         <div class="aui-buttons">  
@@ -14,7 +14,8 @@
  <div class="aui-page-panel">
   <div class="aui-page-panel-inner">
     <section id="content" role="main" >
-
+      <!--div id="aui-message-bar"></div-->
+      <div notifications="top left"></div>
       <table id="mySortableTable" class="aui aui-table-sortable">
         <thead>
           <tr>
@@ -28,12 +29,15 @@
         </thead>
         <tbody>
           <tr ng-repeat="spider in spiders">
-            <td >{{spider}}</td>
+            <td >{{spider.name}}</td>
             <td>2</td>
             <td>s</td>
             <td>we</td>
             <td>ewer</td>
-            <td><button id="run" class="aui-button" ng-click="start(spider)">Run</button></td>
+            <td>
+              <button id="run" class="aui-button" ng-click="start(spider)" ng-show="spider.run==false">Run</button>
+              <button id="run" style="margin-left:0px;" class="aui-button" ng-click="stop(spider)" ng-show="spider.run==true">Stop</button>
+            </td>
           </tr>
         </tbody>
       </table>
